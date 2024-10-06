@@ -252,6 +252,7 @@ div.header-button {
     position: relative;
     max-width: 60%;
     margin-right: 5%;
+    margin-left: 7rem;
 }
 
 
@@ -303,13 +304,18 @@ img.section-1-bottom-left-img {
 /*              section-2                     */
 
 .recipes-container {
-    width: 80%;
-    margin: 0 auto;
-    padding: 20px 0 100px 0;
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 20px 0 0 0;
 }
 
-.featured-recipes h2 {
-    font-size: 24px;
+.recipes-container section:last-child {
+    margin-bottom: 80px;
+}
+
+.recipes-container-header h2 {
+    font-size: 28px;
     margin-bottom: 20px;
 }
 
@@ -318,6 +324,8 @@ img.section-1-bottom-left-img {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 0 8vw;
+    margin: 40px 0 10px 0;
 }
 
 .featured-recipes h2 span {
@@ -326,22 +334,27 @@ img.section-1-bottom-left-img {
 
 .recipes-grid {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    grid-gap: 50px;
+    width: 100%;
     flex-wrap: wrap;
 }
 
 .recipe-card {
     background-color: var(--white-clr);
     border-radius: 8px;
-    width: 30%;
-    padding: 15px;
+    width: 25%;
     text-align: left;
     position: relative;
 }
 
+.recipe-card .img-container {
+    width: 100%;
+}
+
 .img-container img {
-    width: 260px;
-    height: 180px;
+    width: 250px;
+    height: 170px;
     z-index: 10;
     border-radius: 8px;
     margin: 0 12px 15px 12px;
@@ -365,7 +378,7 @@ img.section-1-bottom-left-img {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100%;
+    width: 340px;
     height: 250px;
     border-radius: 10px;
     position: relative;
@@ -522,6 +535,7 @@ h2.red,
 
 .specials-section {
     padding: 20px 20px 60px 20px;
+    margin-bottom: 60px;
 }
 
 .specials-section h1 {
@@ -601,16 +615,16 @@ video {
     display: flex;
     justify-content: space-between;
     color: #333;
-    width: 375px;
-    height: 195px;
+    width: auto;
+    height: auto;
     border-radius: 55px 25px;
-    padding: 20px 20px 30px 20px;
+    padding: 15px 15px 25px 15px;
+    margin: 0 5px;
     cursor: grabbing;
 }
 
 .testimonial-header {
-    align-items: left;
-    line-height: 8px;
+    line-height: auto;
     margin-bottom: 10px;
 }
 
@@ -630,16 +644,11 @@ video {
 }
 
 .testimonial-details p {
-    margin: 0;
-    font-size: 0.9em;
-    color: #666;
+    font-size: .7em;
 }
 
 .testimonial-text {
     font-size: 1em;
-    line-height: 1.5;
-    margin-bottom: 20px;
-    color: #333;
 }
 
 .testimonial-footer {
@@ -704,16 +713,6 @@ video {
 }
 
 
-@media (max-width: 768px) {
-    .testimonial-card {
-        width: 90%;
-        height: auto;
-    }
-
-    .testimonial-section-footer {
-        padding: 0 20px;
-    }
-}
 
 /*                  section-6                     */
 .newsletter-section {
@@ -724,8 +723,9 @@ video {
 }
 
 .overlay {
-    width: 1240px;
+    width: 85%;
     height: 534px;
+    border-radius: 20px;
     background-image: url('../images/newsletter-center-img.png');
     background-size: cover;
     background-position: center;
@@ -950,6 +950,166 @@ video {
 
 
 /*            resposive desing               */
+
+
+@media (max-width:1107px) {
+    /*       menu section        */
+
+    .menu-container {
+        padding-top: 40px;
+    }
+
+    .menu-container h1 {
+        font-size: 5.4vw;
+    }
+
+    .menu-content {
+        flex-direction: column;
+    }
+
+    .menu-list {
+        margin-bottom: 60px;
+    }
+
+    #menu-container-2 .menu-content {
+        flex-direction: column-reverse;
+    }
+
+    .menu-image img {
+        width: 65%;
+        height: auto;
+    }
+
+    /* testemonials */
+
+    .testimonials-section {
+        padding: 20px 0;
+        height: auto;
+    }
+
+    .testimonials-section h1 {
+        font-size: 1.9em;
+    }
+
+    .testimonials-section .highlight {
+        font-weight: 100;
+    }
+
+    .testimonials-content {
+        gap: 15px;
+        padding: 0 20px;
+    }
+
+    .testimonial-card {
+        padding: 15px 15px 25px 15px;
+        margin: 0 5px;
+    }
+
+    .testimonial-header {
+        line-height: auto;
+        margin-bottom: 8px;
+    }
+
+    .testimonial-card img:first-child {
+        margin: 8px 12px 0 0;
+    }
+
+    .testimonial-card img {
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+    }
+
+    .testimonial-details h3 {
+        margin: 0;
+        font-size: .9em;
+    }
+
+    .testimonial-details p {
+        margin: 0;
+        font-size: 0.2em;
+        height: 50px;
+        color: #666;
+    }
+
+    .testimonial-text {
+        font-size: 1em;
+        line-height: 1.5;
+        margin-bottom: 20px;
+        color: #333;
+    }
+
+    .testimonial-footer {
+        font-size: 0.9em;
+        color: var(--first-clr);
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+
+    .testimonial-footer span {
+        margin: 10px 0 0 0;
+    }
+
+    .testimonial-footer img {
+        width: 16px;
+        height: 16px;
+    }
+
+    .testimonial-section-footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 90px;
+    }
+
+    .testimonial-section-footer i {
+        color: var(--first-clr);
+        font-size: 30px;
+    }
+
+    .testimonial-section-footer .testimonial-dots {
+        margin-top: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .testimonial-dots .dot {
+        height: 12px;
+        width: 12px;
+        background-color: #888;
+        border-radius: 50%;
+        display: inline-block;
+        margin: 40px 5px;
+        cursor: pointer;
+    }
+
+    .testimonial-dots .dot.active {
+        background-color: var(--first-clr);
+    }
+
+    .swiper-slide {
+        flex-shrink: 0;
+        width: auto;
+        height: 100%;
+        position: relative;
+        transition-property: transform;
+        display: flex;
+        overflow: hidden;
+    }
+
+    /* recipes  */
+    .img-container img {
+        width: 79%;
+        height: 49%;
+        z-index: 10;
+        border-radius: 8px;
+        margin: 0 12px 15px 12px;
+    }
+}
+
 @media (max-width: 875px) {
 
     /* global */
@@ -963,6 +1123,10 @@ video {
 
     section {
         width: 100%;
+    }
+
+    .hiden-in-resposive {
+        display: none;
     }
 
     /* header */
@@ -1126,7 +1290,7 @@ video {
         justify-content: center;
         align-items: center;
         margin: 0px;
-        margin-bottom: 20px;
+        margin-bottom: 70px;
     }
 
     .featured-recipes h2 {
@@ -1157,9 +1321,9 @@ video {
 
 
     .recipe-card {
-        width: 250px;
-        height: 250px;
-        margin-left: 5px;
+        width: 350px;
+        height: 350px;
+        margin: 0 20px;
         margin-bottom: 80px;
     }
 
@@ -1170,33 +1334,6 @@ video {
 
 
 
-
-    /*       menu section        */
-
-    .menu-container {
-        padding: 20px;
-    }
-
-    .menu-container h1 {
-        font-size: 5.4vw;
-    }
-
-    .menu-content {
-        flex-direction: column;
-    }
-
-    .menu-list {
-        margin-bottom: 60px;
-    }
-
-    #menu-container-2 .menu-content {
-        flex-direction: column-reverse;
-    }
-
-    .menu-image img {
-        width: 500px;
-        height: 500px;
-    }
 
     /* specials section  */
 
@@ -1210,8 +1347,13 @@ video {
         padding: 0;
     }
 
-    .video-container {
+    .specials-content div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 
+    .video-container {
         padding: 0;
     }
 
@@ -1219,70 +1361,334 @@ video {
         width: 80%;
     }
 
+
+
+    /* newsletter-section */
+
+    .overlay {
+        border-radius: 20px;
+        width: 37rem;
+        height: 27rem;
+    }
+
+    .overlay h1 {
+        font-size: 6vw;
+        width: 440px;
+    }
+
+    .input-container {
+        width: 34rem;
+        height: 60px;
+    }
+
+    /* footer */
+    footer {
+        width: 100%;
+    }
+
+    div.footer-logo {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+    }
+
+}
+
+@media (max-width: 470px) {
+    /* global */
+
+
+    .hiden-in-mobile-responsive {
+        display: none;
+    }
+
+    /* header */
+    .sidebar {
+        display: block;
+        position: fixed;
+        overflow-y: hidden;
+        min-width: 60%;
+        height: 100vh;
+        background-color: aqua;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        color: var(--white-clr);
+        position: absolute;
+        z-index: 5;
+        top: 0px;
+        transform: translateX(150%);
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+        transition: .7s;
+    }
+
+    .show-sidebar {
+        transform: translateX(-5%);
+    }
+
+    #menu-open {
+        z-index: 4;
+        font-size: 25px;
+        position: absolute;
+        display: block;
+        right: 40px;
+    }
+
+    #menu-close {
+        display: block;
+        position: absolute;
+        font-size: 30px;
+        top: 30px;
+        left: 78%;
+    }
+
+    .header-center {
+        width: 100%;
+    }
+
+    div.logo {
+        width: 100px;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content: flex-start;
+    }
+
+    #menu-close,
+    #menu-opne {
+        position: absolute;
+        color: red;
+    }
+
+    nav ul li a {
+        font-size: 1rem;
+    }
+
+    .sidebar nav ul {
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin-top: 70px;
+        grid-row-gap: 40px;
+    }
+
+    div.header-button {
+        display: none;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin-top: 50px;
+        background-color: #4584FF;
+    }
+
+    /*               hero                */
+    .text-section h1 {
+        font-size: 6vw;
+    }
+
+    .text-section p {
+        font-size: 2.8vw;
+    }
+
+    .section-1-imgs {
+        max-width: 80%;
+    }
+
+    img.food-img {
+        top: -20px;
+        left: -20px;
+        width: 140px;
+    }
+
+    img.section-1-top-left-img {
+        right: -80px;
+        width: 150px;
+    }
+
+    img.restaurant-img {
+        width: 280px;
+    }
+
+    img.section-1-bottom-left-img {
+        left: -70px;
+        width: 140px;
+    }
+
+    /*           recipes            */
+    .recipes-container {
+        padding: 0 0px;
+    }
+
+    .trendy-recipes h2,
+    .featured-recipes h2 {
+        font-size: 1.4rem;
+        margin-bottom: 20px;
+    }
+
+    .recipes-container-header {
+        justify-content: center;
+        grid-column-gap: 50px;
+        margin: 60px 0 30px 33px;
+        padding: 0;
+    }
+
+    .recipes-grid {
+        display: flex;
+        grid-area: auto;
+        width: 100%;
+        gap: 0px;
+        padding: 0 5px;
+        height: auto;
+        flex-wrap: wrap;
+    }
+
+    .price-badge {
+        top: 5px;
+        left: 5px;
+    }
+
+    .recipe-card {
+        width: 308px;
+        height: 306px;
+        margin: 0px 0 60px;
+    }
+
+    .days-badge {
+        width: 70px;
+        height: 29px;
+    }
+
+    div.img-container {
+        width: 250px;
+        height: 250px;
+    }
+
+    .img-container img {
+        width: auto;
+        height: auto;
+    }
+
+    html {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    /*       menu section        */
+    .menu-container {
+        padding: 60px 0 100px 0;
+        width: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .menu-container h1 {
+        font-size: 5.4vw;
+    }
+
+    .menu-content {
+        flex-direction: column;
+    }
+
+    .menu-list div {
+        z-index: 1;
+        position: relative;
+    }
+
+    .menu-list {
+        width: 100%;
+        margin: 0;
+        padding-left: 20px;
+    }
+
+    #menu-list-1 {
+
+        background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url('../images/burger-big-img.png');
+    }
+
+    #menu-list-2 {
+        background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url('../images/pizza-big-img.png');
+    }
+
+    #menu-list-3 {
+        background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url('../images/drink-big-img.png');
+    }
+
+    #menu-list-1,
+    #menu-list-2,
+    #menu-list-3 {
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    #menu-container-2 .menu-content {
+        flex-direction: column-reverse;
+    }
+
+    .menu-image img {
+        width: 65%;
+        height: auto;
+    }
+
     /* testemonials */
 
     .testimonials-section {
-        padding: 20px;
+        padding: 20px 0;
         height: auto;
     }
 
     .testimonials-section h1 {
-        color: var(--white-clr);
-        text-align: center;
-        font-size: 2em;
-        margin-bottom: 40px;
-        line-height: 1.3;
+        font-size: 1.9em;
     }
 
     .testimonials-section .highlight {
-        color: var(--first-clr);
-        font-weight: 300;
-        font-family: "Irish Grover";
+        font-weight: 100;
     }
 
     .testimonials-content {
-        display: flex;
-        justify-content: center;
-        gap: 20px;
-        padding: 40px 0 0 0;
+        gap: 15px;
+        padding: 0 20px;
     }
 
     .testimonial-card {
-        background-color: var(--white-clr);
-        display: flex;
-        justify-content: space-between;
-        color: #333;
-        width: 375px;
-        height: 195px;
-        border-radius: 55px 25px;
-        padding: 20px 20px 30px 20px;
-        cursor: grabbing;
+        padding: 15px 15px 25px 15px;
+        margin: 0 5px;
     }
 
     .testimonial-header {
-        align-items: left;
-        line-height: 8px;
-        margin-bottom: 10px;
+        line-height: auto;
+        margin-bottom: 8px;
     }
 
     .testimonial-card img:first-child {
-        margin: 10px 15px 0 0;
+        margin: 8px 12px 0 0;
     }
 
     .testimonial-card img {
-        width: 50px;
-        height: 50px;
+        width: 48px;
+        height: 48px;
         border-radius: 50%;
     }
 
     .testimonial-details h3 {
         margin: 0;
-        font-size: 1.2em;
+        font-size: .9em;
     }
 
     .testimonial-details p {
         margin: 0;
-        font-size: 0.9em;
+        font-size: 0.2em;
+        height: 50px;
         color: #666;
     }
 
@@ -1311,68 +1717,66 @@ video {
         height: 16px;
     }
 
-    .testimonial-section-footer {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 0 90px;
+
+    /* recipes  */
+    .img-container img {
+        width: 79%;
+        height: 49%;
+        z-index: 10;
+        border-radius: 8px;
+        margin: 0 12px 15px 12px;
     }
 
-    .testimonial-section-footer i {
-        color: var(--first-clr);
-        font-size: 30px;
+    /* specials section  */
+
+    .specials-content {
+        flex-direction: column;
+        padding: 0;
     }
 
-    .testimonial-section-footer .testimonial-dots {
-        margin-top: 20px;
+
+    .specials-section {
+        padding: 0;
+    }
+
+    .specials-content div {
         display: flex;
         align-items: center;
         justify-content: center;
     }
 
-    .testimonial-dots .dot {
-        height: 12px;
-        width: 12px;
-        background-color: #888;
-        border-radius: 50%;
-        display: inline-block;
-        margin: 40px 5px;
-        cursor: pointer;
+    .video-container {
+        padding: 0;
     }
 
-    .testimonial-dots .dot.active {
-        background-color: var(--first-clr);
+    video {
+        width: 80%;
     }
 
-    .swiper-slide {
-        flex-shrink: 0;
-        width: auto;
-        height: 100%;
-        position: relative;
-        transition-property: transform;
-        display: flex;
-        overflow: hidden;
-    }
+
 
     /* newsletter-section */
 
     .overlay {
         border-radius: 20px;
-        width: 37rem;
+        width: 90%;
         height: 27rem;
     }
 
     .overlay h1 {
         font-size: 6vw;
-        width: 440px;
+        width: 90%;
     }
 
     .input-container {
-        width: 34rem;
+        width: 90%;
         height: 60px;
     }
 
     /* footer */
+    footer {
+        width: 100%;
+    }
 
     div.footer-logo {
         display: flex;
@@ -1380,6 +1784,10 @@ video {
         align-items: center;
         justify-content: center;
         gap: 20px;
+    }
+
+    .footer-menu li {
+        margin: 5px;
     }
 
 }
