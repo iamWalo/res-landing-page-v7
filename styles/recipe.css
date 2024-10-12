@@ -103,3 +103,117 @@
 .show {
     display: flex;
 }
+
+.recipes-grid {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    height: 300vh;
+}
+
+.recipes-container {
+    height: 340vh;
+}
+
+@media(max-width:840px) {
+    .recipes-grid {
+        display: grid;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        gap: 20px;
+        grid-template-columns: 1fr 1fr;
+        padding: 0 20px;
+    }
+
+    .recipe-card {
+        scroll-snap-align: start;
+        /* لتثبيت العنصر عند التمرير */
+        flex: 0 0 auto;
+        /* لمنع العنصر من تغيير حجمه */
+        width: auto;
+        height: auto;
+        margin-bottom: 80px;
+    }
+}
+
+@media(max-width:470px) {
+    .recipes-container {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0px;
+        margin-bottom: 70px;
+    }
+
+    .featured-recipes h2 {
+        font-size: 1.9rem;
+        margin-bottom: 20px;
+    }
+
+
+    .recipes-container-header {
+        width: 90%;
+        padding: 10px 0px 30px 0;
+        margin-left: 40px;
+    }
+
+    .featured-recipes h2 span {
+        color: var(--first-clr);
+    }
+
+    .recipes-grid {
+        display: flex;
+        height: auto;
+        overflow-x: auto;
+        /* تمكين التمرير الأفقي */
+        scroll-snap-type: x mandatory;
+        /* لجعل التمرير يستقر عند بداية كل عنصر */
+        -webkit-overflow-scrolling: touch;
+        /* لتحسين التمرير على الأجهزة التي تعمل باللمس */
+        gap: 15px;
+        /* مسافة بين العناصر */
+        padding: 0;
+    }
+
+    .recipes-grid::-webkit-scrollbar {
+        display: none;
+    }
+
+
+
+    .recipe-card {
+        scroll-snap-align: start;
+        /* لتثبيت العنصر عند التمرير */
+        flex: 0 0 auto;
+        /* لمنع العنصر من تغيير حجمه */
+        max-width: 190px;
+        height: auto;
+        margin-bottom: 80px;
+    }
+
+
+    .recipe-card .img-container {
+        width: 195px;
+        height: 180px;
+    }
+
+    .img-container img {
+        width: 140px;
+        height: 100px;
+    }
+
+    #big-title h1 {
+        font-size: 32px;
+        margin-right: 18px;
+    }
+
+    #small-title h1 {
+        font-size: 18px;
+        margin-right: 18px;
+    }
+}
