@@ -73,6 +73,9 @@ h6 {
 
 .content {
     display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 
 
@@ -342,6 +345,7 @@ img.section-1-bottom-left-img {
     grid-gap: 50px;
     width: 100%;
 }
+
 
 .recipe-card {
     background-color: var(--white-clr);
@@ -888,11 +892,11 @@ video {
 
 /* animation */
 .show-from-left {
-    animation: show-from-left 1s;
+    animation: show-from-left .4s;
 }
 
 .show-from-right {
-    animation: show-from-right 1s;
+    animation: show-from-right .4s;
 }
 
 .show-item {
@@ -1119,8 +1123,8 @@ video {
     body {
         margin: 0;
         padding: 0;
-        width: auto;
-        overflow-x: hidden;
+        max-width: 99.99%;
+        overflow-x: none;
     }
 
 
@@ -1180,8 +1184,8 @@ video {
         width: 100px;
         display: flex;
         flex-direction: column;
-        align-items: start;
-        justify-content: flex-start;
+        align-items: center;
+        justify-content: center;
     }
 
     #menu-close,
@@ -1211,6 +1215,15 @@ video {
         margin-top: 50px;
         background-color: #4584FF;
     }
+
+    .logo img {
+        width: 42px;
+        height: 53.737px;
+        flex-shrink: 0;
+        margin-right: 3px;
+    }
+
+
 
     /*               hero                */
     .hero-container {
@@ -1310,10 +1323,21 @@ video {
         color: var(--first-clr);
     }
 
-    .recipes-grid {
-        display: flex;
+    .featured-recipes,
+    .trendy-recipes {
+
+        width: 100%;
+        padding: 0 50px;
+        box-sizing: border-box;
         height: auto;
-        overflow-x: auto;
+        overflow-x: scroll;
+    }
+
+    .recipes-grid {
+
+        width: 800px;
+        padding: 0 40px;
+        display: flex;
         /* تمكين التمرير الأفقي */
         scroll-snap-type: x mandatory;
         /* لجعل التمرير يستقر عند بداية كل عنصر */
@@ -1324,7 +1348,7 @@ video {
     }
 
     .recipes-grid::-webkit-scrollbar {
-        display: none;
+        display: hidden;
     }
 
 
@@ -1379,7 +1403,7 @@ video {
 
     .overlay {
         border-radius: 20px;
-        width: 37rem;
+        width: 34rem;
         height: 27rem;
     }
 
@@ -1406,6 +1430,21 @@ video {
         gap: 20px;
     }
 
+    div.footer-languages {
+        display: none;
+    }
+
+    .footer-menu li {
+        width: auto;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+    }
+
+    .footer-menu {
+        padding: 0 10px;
+        margin-top: 30px;
+    }
 }
 
 @media (max-width: 470px) {
@@ -1512,27 +1551,27 @@ video {
     }
 
     .section-1-imgs {
-        max-width: 80%;
+        width: auto;
     }
 
     img.food-img {
         top: -20px;
         left: -20px;
-        width: 140px;
+        width: 124px;
     }
 
     img.section-1-top-left-img {
-        right: -80px;
-        width: 150px;
+        right: -60px;
+        width: 120px;
     }
 
     img.restaurant-img {
-        width: 280px;
+        width: 240px;
     }
 
     img.section-1-bottom-left-img {
         left: -70px;
-        width: 140px;
+        width: 100px;
     }
 
     /*           recipes            */
@@ -1549,19 +1588,10 @@ video {
     .recipes-container-header {
         justify-content: center;
         grid-column-gap: 50px;
-        margin: 60px 0 30px 33px;
+        margin: 60px 0 30px 10px;
         padding: 0;
     }
 
-    .recipes-grid {
-        display: flex;
-        grid-area: auto;
-        width: 100%;
-        gap: 0px;
-        padding: 0 5px;
-        height: auto;
-        flex-wrap: wrap;
-    }
 
     .price-badge {
         top: 5px;
@@ -1574,20 +1604,55 @@ video {
         margin: 0px 0 60px;
     }
 
+
+
+    .featured-recipes,
+    .trendy-recipes {
+        width: 100%;
+        padding: 0 50px;
+        box-sizing: border-box;
+        height: auto;
+        overflow-x: scroll;
+    }
+
+    .recipes-grid {
+        height: 300px;
+        width: 600px;
+        padding: 0 40px;
+        display: flex;
+        /* تمكين التمرير الأفقي */
+        scroll-snap-type: x mandatory;
+        /* لجعل التمرير يستقر عند بداية كل عنصر */
+        -webkit-overflow-scrolling: touch;
+        /* لتحسين التمرير على الأجهزة التي تعمل باللمس */
+        gap: 20px;
+        /* مسافة بين العناصر */
+    }
+
+
+    .recipes-grid::-webkit-scrollbar {
+        display: hidden;
+    }
+
+
+
+    .recipe-card {
+        width: 220px;
+        height: 120px;
+    }
+
+
     .days-badge {
         width: 70px;
         height: 29px;
     }
 
     div.img-container {
-        width: 250px;
-        height: 250px;
+        width: 140px;
+        height: 190px;
     }
 
-    .img-container img {
-        width: auto;
-        height: auto;
-    }
+
 
 
 

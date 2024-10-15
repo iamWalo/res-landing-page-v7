@@ -46,9 +46,9 @@ window.addEventListener('load', () => {
         setAnimationTo(headerLis, 'show-item');
         setTimeout(() => {
 
-            setAnimationTo(menuItems1, 'show-from-left', 150);
-            setAnimationTo(menuItems2, 'show-from-right', 150);
-            setAnimationTo(menuItems3, 'show-from-left', 150);
+            setAnimationTo(menuItems1, 'show-from-left', 100);
+            setAnimationTo(menuItems2, 'show-from-right', 100);
+            setAnimationTo(menuItems3, 'show-from-left', 100);
 
         }, 1000);
     }
