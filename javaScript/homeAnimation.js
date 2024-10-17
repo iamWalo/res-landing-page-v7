@@ -43,7 +43,9 @@ window.addEventListener('load', () => {
         setAnimationTo([menuContainerImage2], 'show-from-left');
         setAnimationTo(aboutSectionsImage, 'show-item');
         setAnimationTo(aboutSectionsText, 'show-item');
-        setAnimationTo(headerLis, 'show-item');
+        if (window.innerWidth > 875) {
+            setAnimationTo(headerLis, 'show-item');
+        }
         setTimeout(() => {
 
             setAnimationTo(menuItems1, 'show-from-left', 100);

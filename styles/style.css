@@ -104,7 +104,7 @@ div.logo {
     justify-content: center;
 }
 
-div.sidebar {
+div.nav-links {
     margin: 0 250px;
     padding-top: 10px;
 }
@@ -1133,46 +1133,55 @@ video {
     }
 
     /* header */
-    .sidebar {
-        display: block;
-        position: fixed;
-        overflow-y: hidden;
-        min-width: 60%;
-        height: 100vh;
-        background-color: aqua;
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
-        color: var(--white-clr);
-        position: absolute;
-        z-index: 5;
-        top: 0px;
-        transform: translateX(150%);
+    .header {
+        position: relative;
+        min-height: 100px;
+    }
+
+    div.nav-links {
+        display: none;
+        width: 100%;
+        height: auto;
+        margin: 0;
+        margin-top: 140px;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        padding: 20px;
-        transition: .7s;
+        padding: 60px 0;
+        transition: 1.7s;
     }
 
-    .show-sidebar {
-        transform: translateX(-5%);
+    div.header-center {
+        justify-content: center;
     }
 
+    .nav-links nav ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin: 0px;
+        padding: 0 0 40px 0;
+        grid-row-gap: 40px;
+    }
+
+
+
+    #menu-close,
     #menu-open {
         z-index: 4;
         font-size: 25px;
         position: absolute;
         display: block;
-        right: 40px;
+        top: 0px;
+        margin-top: 52px;
+        right: 45px;
     }
 
     #menu-close {
-        display: block;
-        position: absolute;
-        font-size: 30px;
-        top: 30px;
-        left: 78%;
+        display: none;
+        color: var(--black-clr);
     }
 
     .header-center {
@@ -1180,32 +1189,18 @@ video {
         padding: 0 30px;
     }
 
-    div.logo {
-        width: 100px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
-
-    #menu-close,
-    #menu-opne {
+    .header div.logo {
         position: absolute;
-        color: red;
+        top: 13px;
+        left: 20px;
+        margin-top: 20px;
+        box-sizing: border-box;
     }
 
     nav ul li a {
         font-size: 1rem;
     }
 
-    .sidebar nav ul {
-        display: grid;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        margin-top: 70px;
-        grid-row-gap: 40px;
-    }
 
     div.header-button {
         display: none;
@@ -1458,79 +1453,18 @@ video {
         display: none;
     }
 
-    /* header */
-    .sidebar {
-        display: block;
-        position: fixed;
-        overflow-y: hidden;
-        min-width: 60%;
-        height: 100vh;
-        background-color: aqua;
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
-        color: var(--white-clr);
-        position: absolute;
-        z-index: 5;
-        top: 0px;
-        transform: translateX(150%);
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        padding: 20px;
-        transition: .7s;
-    }
 
-    .show-sidebar {
-        transform: translateX(-5%);
-    }
-
-    #menu-open {
-        z-index: 4;
-        font-size: 25px;
-        position: absolute;
-        display: block;
-        right: 40px;
-    }
-
-    #menu-close {
-        display: block;
-        position: absolute;
-        font-size: 30px;
-        top: 30px;
-        left: 78%;
-    }
 
     .header-center {
         width: 100%;
     }
 
-    div.logo {
-        width: 100px;
-        display: flex;
-        flex-direction: column;
-        align-items: start;
-        justify-content: flex-start;
-    }
-
-    #menu-close,
-    #menu-opne {
-        position: absolute;
-        color: red;
-    }
 
     nav ul li a {
         font-size: 1rem;
     }
 
-    .sidebar nav ul {
-        display: grid;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        margin-top: 70px;
-        grid-row-gap: 40px;
-    }
+
 
     div.header-button {
         display: none;
@@ -1694,7 +1628,7 @@ video {
     }
 
     #menu-list-3 {
-        background-image: url('../images/res-drunk-bkg.jpg');
+        background-image: url('../images/res-drink-bkg.jpg');
     }
 
     #menu-list-1,
